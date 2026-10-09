@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h2>Guess My Number</h2>
+    </header>
+    
+    <main>
+        <section class="game-display" aria-labelledby="game-title">
+            <p class="message" role="status" aria-live="polite">Start Guessing...</p>
+            <div class="number" aria-label="Secret number">?</div>
+        </section>
+
+        <section class="game-controls">
+            <label for="guess-input" class="sr-only">Enter your guess:</label>
+            <input 
+                type="number" 
+                id="guess-input"
+                class="guess" 
+                min="1" 
+                max="20" 
+                placeholder="1–20" 
+                required 
+            />
+
+            <div class="actions">
+                <button type="button" class="check">Check!</button>
+                <button type="button" class="again">Again!</button>
+            </div>
+        </section>
+
+        <section class="game-stats">
+            <p>Score: <span class="score">20</span></p>
+            <p>Highscore: <span class="highscore">0</span></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
